@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燧人（上海）医疗科技有限公司</title>
+
+    <script src="./js/html5.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <script src="./js/breadcrumb_help.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/girl.css">
+    <link rel="shortcut icon" href="./img/login-logo.png" type="image/x-icon" />
+
+    <!-- 这里是多选的引用 -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+</head>
+
+<body>
+    <div class="girl_father_div">
+        <h2 class="girl_main_text">bootstrap各大组件应用实例</h2>
+
+        <!-- Bootstrap表格 -->
+        <!-- class="table"为任意表格添加样式(只有横向分割线) -->
+        <!-- class="table-striped" tbody内增加斑马线形式的条纹 -->
+        <!-- class="table-bordered" 为所有表格的单元格添加边框 -->
+        <!-- class="table-hover" 启用表格中 tbody 上的行的悬停效果hover -->
+        <!-- class="table-condensed" 让表格更加紧凑 -->
+
+
+        <!-- <tr class="active"> 将某行单独的斑马颜色标记上  -->
+        <!-- <tr class="success"> 将某行单独的成功颜色(绿色)标记上   同理：info,warning,danger-->
+
+        <!-- 修改本来的样式和修改饿了么组件的方式类似 -->
+        <!-- class="col-md-1" 可以设置单元格之间的比例，有点像线性布局 -->
+
+        <h3>一、Bootstrap表格</h3>
+        <table class="leo_table table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th class="col-md-1">序号</th>
+                    <th class="col-md-2">姓名</th>
+                    <th class="col-md-2">年龄</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>陈独秀</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>李大钊</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>鲁迅</td>
+                    <td>36</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <!-- Bootstrap表单 -->
+        <!-- class="form-inline" 内联表单，向左对齐，标签是并排的 -->
+        <h3>二、Bootstrap表单</h3>
+
+        <h4>2.1、垂直表单</h4>
+        <form class="form" role="form">
+            <div class="form-group">
+                <label for="name">名称</label>
+                <input type="text" class="form-control first_input" id="name" placeholder="请输入名称">
+            </div>
+
+            <div class="form-group">
+                <label for="inputfile">文件输入</label>
+                <input type="file" id="inputfile">
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input id="checkbox" type="checkbox">请打勾
+                </label>
+            </div>
+        </form>
+        <button id="submitleo" type="submit" class="btn btn-default">提交</button>
+
+
+        <h4 class="margin_top_25">2.2、水平表单</h4>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="name_hori" class="col-sm-2 control-label">名称</label>
+                <input type="text" class="form-control first_input" id="name_hori" placeholder="请输入名称">
+            </div>
+
+            <div class="form-group">
+                <label for="inputfile_hori" class="col-sm-2 control-label">文件输入</label>
+                <input type="file" id="inputfile_hori">
+            </div>
+        </form>
+
+
+        <h4 class="margin_top_25">2.3、文本框</h4>
+        <form role="form" class="textarea_margin">
+            <div class="form-group">
+                <label for="name col-sm-2">文本框</label>
+                <textarea class="form-control textarea_forbid" rows="3" placeholder="请输入评价"></textarea>
+            </div>
+        </form>
+
+
+        <h4 class="margin_top_25">2.4、复选框</h4>
+        <div class="checkbox" id="checkbox_apple">
+            <label> <input name="muchBox" type="checkbox" value="1">苹果</label>
+        </div>
+
+        <div class="checkbox" id="checkbox_banana">
+            <label> <input name="muchBox" type="checkbox" value="2">香蕉</label>
+        </div>
+        <button id="submit_checkbox" type="submit" class="btn btn-default">提交</button>
+
+
+        <h4 class="margin_top_25">2.5、单选框</h4>
+        <div class="radio">
+            <label> <input name="radio_button" type="radio" value="1" checked>女生</label>
+        </div>
+
+        <div class="radio">
+            <label> <input name="radio_button" type="radio" value="2">男生</label>
+        </div>
+        <button id="submit_radio" type="submit" class="btn btn-default">提交</button>
+
+        <h4 class="margin_top_25">2.6、选择框</h4>
+        <select id="selectLeo" class="form-control form-control-placeholder">
+            <option value="-1" disabled selected hidden>请选择</option>
+            <option value="0" style="color: black;">蕾丝</option>
+            <option value="1" style="color: black;">黑丝</option>
+            <option value="2" style="color: black;">肉丝</option>
+            <option value="3" style="color: black;">杜蕾斯</option>
+            <option value="4" style="color: black;">青椒肉丝</option>
+        </select>
+        <div id="singleValue">当前选中的value:</div>
+        <div id="singleText">当前选中的text:</div>
+
+
+        <div style="margin-top: 20px;">
+            <button id="submit_single_select" type="submit" class="btn btn-default">提交</button>
+            <button id="submit_single_repet" type="submit" class="btn btn-default">重置</button>
+        </div>
+
+
+
+
+        <h4 class="margin_top_25">2.7、多选选择框</h4>
+        <select multiple="multiple" id="selectLeo_more" class="selectpicker form-control" title="请选择">
+            <option value="0">蕾丝</option>
+            <option value="1">黑丝</option>
+            <option value="2">肉丝</option>
+            <option value="3">杜蕾斯</option>
+            <option value="4">青椒肉丝</option>
+        </select>
+        <div id="multValue">当前选中的value:</div>
+        <div id="multText">当前选中的text:</div>
+
+
+
+        <div style="margin-top: 20px;">
+            <button id="submit_mult_select" type="submit" class="btn btn-default">提交</button>
+            <button id="submit_mult_repet" type="submit" class="btn btn-default">重置</button>
+        </div>
+        　　　　
+
+
+
+        <!-- Bootstrap按钮 -->
+        <h3>三、Bootstrap按钮</h3>
+
+        <button type="button" class="btn btn-default">默认按钮</button>
+
+        <button type="button" class="btn btn-primary">原始按钮</button>
+
+        <button type="button" class="btn btn-success">成功按钮</button>
+
+        <button type="button" class="btn btn-info">信息按钮</button>
+
+        <button type="button" class="btn btn-warning">警告按钮</button>
+
+        <button type="button" class="btn btn-danger">危险按钮</button>
+
+        <button type="button" class="btn btn-link">链接按钮</button>
+
+
+
+
+        <!-- Bootstrap图片 -->
+        <h3>四、Bootstrap图片</h3>
+        <img src="https://user-gold-cdn.xitu.io/2019/7/11/16be01eb42991e71?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1"
+            class="img-rounded">
+        <img src="https://user-gold-cdn.xitu.io/2019/7/11/16be01eb42991e71?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1"
+            class="img-circle">
+        <img src="https://user-gold-cdn.xitu.io/2019/7/11/16be01eb42991e71?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1    "
+            class="img-thumbnail">
+
+
+
+        <!-- Bootstrap下拉菜单 -->
+        <h3>五、Bootstrap下拉菜单</h3>
+        <div class="dropdown" id="drop_leo">
+            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                主题
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation" value='1'>
+                    <a role="menuitem" tabindex="-1">Java</a>
+                </li>
+                <li role="presentation" value='2'>
+                    <a role="menuitem" tabindex="-1">数据挖掘</a>
+                </li>
+                <li role="presentation" value='3'>
+                    <a role="menuitem" tabindex="-1">数据通信/网络</a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation" value='4'>
+                    <a role="menuitem" tabindex="-1">分离的链接</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <h3>六、Bootstrap按钮组</h3>
+
+        <h4>6.1、按钮组</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">按钮1</button>
+            <button type="button" class="btn btn-default">按钮2</button>
+            <button type="button" class="btn btn-default">按钮3</button>
+        </div>
+
+
+        <h4>6.2、按钮组嵌套</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">按钮1</button>
+            <button type="button" class="btn btn-default">按钮2</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    按钮3
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">下拉按钮1号</a></li>
+                    <li><a href="#">下拉按钮2号</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h3>七、输入框组</h3>
+
+        <h4>7.1、基本的输入框组</h4>
+        <div style="padding: 100px 100px 10px;">
+            <form class="bs-example bs-example-form" role="form">
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" placeholder="twitterhandle">
+                </div>
+                <br>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-addon">.00</span>
+                </div>
+                <br>
+                <div class="input-group input-grop-sm">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control">
+                    <!-- <span class="input-group-addon">.00</span> -->
+                </div>
+            </form>
+        </div>
+
+        <h4>7.2、按钮插件</h4>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default"> 点我！</button>
+            </span>
+            <input type="text" class="form-control">
+
+        </div>
+
+
+
+        <!-- 导航菜单 -->
+        <!-- 标签式导航菜单：nav-tabs -->
+        <!-- 胶囊式导航菜单：nav-pills -->
+        <!-- 想让导航菜单垂直：nav-stacked -->
+        <!-- 想要两端对齐：nav-justified -->
+
+        <h3>八、导航元素</h3>
+        <p>标签式的导航菜单</p>
+        <ul id="nav_leo" class="nav nav-tabs">
+            <li><a>SVN</a></li>
+            <li><a>iOS</a></li>
+            <li><a>VB.Net</a></li>
+            <li><a>Java</a></li>
+            <li><a>PHP</a></li>
+        </ul>
+
+
+
+
+
+
+
+        <!-- 这里有个小问题，如果一个页面有2个导航栏，一个需要改变样式，一个不需要的话。
+        这里无法使用作用域的问题，只能拷贝出来修改css样式和名称去引用 -->
+        <!-- 导航栏 -->
+        <h3>九、导航栏</h3>
+        <h4>9.1、默认的导航栏</h4>
+
+
+        <nav id="navbar_leo" class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-head">
+                    <a class="navbar-brand">稀土掘金</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                    <li><a>Android</a></li>
+                    <li><a>Ios</a></li>
+                    <li><a>前端</a></li>
+                    <li><a>后端</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <h4>9.2、响应式的导航栏</h4>
+        <nav id="navbar_second" class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">菜鸟教程</a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a>iOS</a></li>
+                        <li><a>SVN</a></li>
+                        <li><a>Android</a></li>
+                        <li><a>前端</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <h3>十、面包屑导航</h3>
+        <ul id="breadcrumb_container" class="breadcrumb">
+            <!-- <li>Home</li>
+            <li>2013</li>
+            <li>十月</li>
+            <li>27号</li> -->
+            <li style="visibility: hidden;">placeholder</li>
+        </ul>
+
+        <button id="submit_brad" type="submit" class="btn btn-default">初始化面包屑</button>
+
+        <button id="submit_brad_son" type="submit" class="btn btn-default">新加Son</button>
+
+
+        <!-- 关于Bootstrap插件的用法 -->
+        <h3>十一、关于Bootstrap插件的用法</h3>
+
+        <h4>tooltip</h4>
+        <button type="button" class="btn btn-success" data-toggle="tooltip" title="我只是个说明！">移到我身上</button>
+
+        <h4>popver</h4>
+        <button type="button" class="btn btn-warning" title="说明"  data-toggle="popover"
+            data-placement="bottom" data-content="我就是一段小说吗了哦！">
+            看什么看，点我啊
+        </button>
+
+        <h4>bootstrap折叠</h4>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapseOne">
+                            点击我进行展开，再次点击我进行折叠。第 1 部分
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+                        vice lomo.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapseTwo">
+                            点击我进行展开，再次点击我进行折叠。第 2 部分
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+                        vice lomo.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapseThree">
+                            点击我进行展开，再次点击我进行折叠。第 3 部分
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+                        vice lomo.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="height: 1000px;"></div>
+
+
+
+
+
+    </div>
+
+</body>
+
+<script>
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+
+    //10、面包屑相关
+
+    // 初始化面包屑Home
+    $('#submit_brad').click(function () {
+        var breadcrumbHtml = initBreadcrumb()
+        $('#breadcrumb_container').html(breadcrumbHtml)
+        console.log('我这里是最后的 ==== ' + breadcrumbHtml)
+    })
+
+    // 新增子路由son
+    $('#submit_brad_son').click(function () {
+        let breadcrumbHtml = addBreadcrumb('son')
+        $('#breadcrumb_container').html(breadcrumbHtml)
+    })
+
+    $('#breadcrumb_container').on('click', 'li', function () {
+        let breadListJson = sessionStorage.getItem('BREADCRUMB_LIST')
+        let breadList = JSON.parse(breadListJson)
+        if ($(this).val() <= breadList.length - 1) {
+            let breadcrumbHtml = clickBreadcrumb($(this).val())
+            $('#breadcrumb_container').html(breadcrumbHtml)
+        }
+
+    })
+
+
+
+
+
+    //9.1、导航栏点击切换
+    $('#navbar_leo li').click(function () {
+        $(this).tab('show')
+        console.log($(this).text())
+    })
+
+
+
+
+    //8、导航元素 点击切换按钮
+    $('#nav_leo a').click(function () {
+        $(this).tab('show')
+        console.log($(this).text())
+    })
+
+
+
+
+    // 5、获取下拉菜单的值
+    $('#drop_leo li').click(function () {
+        //获取value值，及获取text文本
+        console.log($(this).val())
+        console.log($(this).text().trim())
+    })
+
+
+
+
+
+
+    // 2.1、这是垂直表单获取表单内各内容的方法
+    $('#submitleo').click(function () {
+        var name = $('#name').val();
+        var filePath = $('#inputfile').val();
+        var checked = $('#checkbox').is(':checked')
+        console.log(name)
+        console.log(filePath)
+        console.log(checked)
+    })
+
+
+    // 2.4、这里是多个复选框多选，选出所选选项的值
+    $('#submit_checkbox').click(function () {
+        var otherValues = $("input:checkbox[name='muchBox']:checked")
+        for (const key in otherValues) {
+            if (otherValues[key].checked) {
+                console.log(otherValues[key].defaultValue)
+            }
+        }
+    })
+
+
+    // 2.5、这里是单选框，选出所选的值
+    $('#submit_radio').click(function () {
+        var radioValues = $("input:radio[name='radio_button']:checked")
+        console.log(radioValues[0].defaultValue)
+    })
+
+    // 2.6、单选选择框获取选择的值
+    // 单选框样式option无法修改，如果想要修改，可以类似自己弄个组件 div ul li去实现
+    // 这里是给选择框加上placeholder的方法
+    $("#selectLeo").on('change', function () {
+        if ($(this).val() != -1) {
+            //这里是默认的
+            $('#selectLeo').addClass('black_color').removeClass('gray_color')
+        }
+    })
+
+
+
+
+
+
+    //这是打印选择框当前选中的值
+    $('#submit_single_select').click(function () {
+        var options = $('#selectLeo option:selected')
+        $('#singleValue').html('当前选中的value: ' + options.val())
+        $('#singleText').html('当前选中的text: ' + options.text())
+        console.log(options.val())
+        console.log(options.text())
+    })
+
+
+    // 这是点击重置按钮后，回到默认的初始值
+    $('#submit_single_repet').click(function () {
+        var options = $('#selectLeo option')
+        options[0].selected = true
+        $('#selectLeo').addClass('gray_color').removeClass('black_color')
+    })
+
+
+
+    // 2.7 多选选择框
+    //多选选择框还需要引用其他几个依赖，在head里
+    $('#submit_mult_select').click(function () {
+        $('#multValue').html('当前选中的value: ' + $('#selectLeo_more').val())
+        $('#multText').html('当前选中的text: ' + $('[data-id|=selectLeo_more').text())
+        console.log($('#selectLeo_more').val())
+    })
+
+
+
+    //多选框监听，有值时修改颜色
+    $('#selectLeo_more').on('change', function () {
+        if ($(this).val().length != 0) {
+            //这里是默认的
+            $('.filter-option-inner-inner').css("color", "black")
+        } else {
+            $('.filter-option-inner-inner').css("color", "#ccc")
+        }
+    })
+
+
+
+
+    //重置
+    $('#submit_mult_repet').click(function () {
+        $('#selectLeo_more').selectpicker('deselectAll');
+    })
+
+
+
+</script>
+
+</html>

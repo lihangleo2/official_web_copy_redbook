@@ -1,0 +1,289 @@
+.home_father_div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottom_text{
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.plice_pic{
+    width: 16px;
+    height: 16px;
+}
+
+.margin_bottom_50{
+    margin-bottom: 50px;
+}
+
+.margin_top_20{
+    margin-top: 20px;
+}
+
+.bottom_small_text{
+    color: #999;
+    font-size: 9px;
+}
+
+
+
+.down_div{
+    margin-top: 50px;
+}
+
+
+.with_ios_er{
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+
+.with_ios_er:hover{
+    animation-name: downBig;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay:0s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes downSmall {
+    from{
+        height: 182px;
+    }
+
+    to{
+        height: 40px;
+    }
+}
+
+
+
+
+@keyframes downBig {
+    from{
+        height: 40px;
+    }
+
+    to{
+        height: 182px;
+    }
+}
+
+
+.animal_scale_small{
+    animation-name: downSmall;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay:0s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.ios_button{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    /* 解决吧底部hover挡住 */
+    pointer-events: none;
+}
+
+.android_button{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.wx_ma_out{
+    width: 150px;
+    height: 142px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.margin_left_20{
+    margin-left: 20px;
+}
+
+.ios_pic{
+    width: 25px;
+    height: 25px;
+}
+
+.ios_pic_er{
+    width: 134px;
+    height: 134px;
+}
+
+.ios_text{
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+
+.center_text{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+
+
+
+.center_layout{
+    display: inline-flex;
+}
+
+
+/* 中间部分的左右 */
+.center_div_left{
+    width: 300px;
+    height: 600px;
+    position: relative;
+    animation-name: moveFromLeft;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay:200ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.center_div_right{
+    margin-left: 50px;
+    margin-top: 200px;
+    animation-name: moveFromRight;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay:200ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+.set_text_center{
+    text-align: center;
+}
+
+
+.hiddenFromVisiable{
+    animation-name: hiddenFromVisiable;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay:1200ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes hiddenFromVisiable {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+@keyframes moveFromRight {
+    from{
+        transform: translate(100vw,0);
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+
+@keyframes moveFromLeft {
+    from{
+        transform: translate(-100vw,0);
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+
+
+
+
+
+
+.big_logo_style{
+    width: 143px;
+    height: 50px;
+    display: inline-block;
+}
+
+
+.video_iphone{
+    width: 260px;
+    height: 564px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.source{  
+    min-width: 100%;  
+    min-height: 100%;  
+    height: auto;  
+    width: auto;  
+}
+
+.phone_outer{
+    width: 300px;
+    height: 600px;
+    position: absolute;
+}

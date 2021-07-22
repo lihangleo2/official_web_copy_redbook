@@ -1,0 +1,153 @@
+
+.girl_father_div{
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    /* background-color: red; */
+}
+
+.girl_main_text{
+    margin-top: 50px;
+    display: inline-block;
+    color: #333333;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+
+
+.leo_table{
+    width: 500px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+
+.first_input{
+    width: 250px;
+}
+
+.textarea_margin{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.textarea_forbid{
+    resize: none;
+}
+
+h3{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+
+h4{
+    font-weight: bold;
+}
+
+
+.margin_top_25{
+    margin-top: 40px;
+}
+
+
+.form-control-placeholder{
+    color: #ccc;
+}
+
+
+.gray_color{
+    color: #ccc;
+}
+
+.black_color{
+    color: black;
+}
+
+
+.option {
+    color: black;
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+
+
+.filter-option-inner-inner{
+    color: #ccc;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: black;
+    white-space: nowrap;
+}
+
+
+.dropdown-menu>li>a:hover {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: white;
+    white-space: nowrap;
+    background-color: rgba(75, 62, 255, 0.767);
+}
+
+
+
+/* 这个是解决Bootstrap按钮点击以后出现的边框 */
+.btn:focus,.btn:active:focus,
+.btn.active:focus,.btn.focus,
+.btn:active.focus,.btn.active.focus {  
+ outline: none;   
+ border-color: transparent;   
+ box-shadow:none;
+}
+
+
+    /* 修改默认导航栏 */
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: rgb(85, 85, 243);
+}
+   
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: rgb(85, 85, 243);
+    
+}
+
+
+
+/* 十、修改面包屑导航的分隔符 */
+/* .breadcrumb > li + li:before {
+    color: #ff0000;
+    content: "| ";
+    padding: 0 5px;
+} */
+    
+
+
+

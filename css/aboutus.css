@@ -1,0 +1,14 @@
+.aboutus_father_div{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus_main_text{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}

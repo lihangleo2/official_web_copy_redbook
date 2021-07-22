@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <!-- 清楚缓存相关 -->
+    <!-- <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" /> -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>燧人（上海）医疗科技有限公司</title>
+    <script src="./js/html5.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" href="./img/login-logo.png" type="image/x-icon" />
+    <script type="text/javascript" src="./js/http_leo.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="index_father">
+        <video class="video_style" autoplay loop muted poster="./img/background_img.jpg">
+            <source class="source" src="./img/背景视频.mp4" type="video/mp4">
+        </video>
+
+        <div class="top_title">
+            <img class="title_logo" src="./img/red_logo.png" alt="">
+            <div style="flex: 1;"></div>
+
+            <div id="tab_1" class="red_father red_bg animal_fall_down">
+                <div class="font_tab_title">首页欣赏</div>
+                <div id="tab_1_text" class="red_text">学</div>
+            </div>
+
+            <div id="tab_2" class="blue_father red_bg animal_fall_down_two">
+                <div class="font_tab_title">新闻中心</div>
+                <div id="tab_2_text" class="blue_text">无</div>
+            </div>
+
+            <div id="tab_3" class="black_father red_bg animal_fall_down_three">
+                <div class="font_tab_title">关于我们</div>
+                <div id="tab_3_text" class="black_text">止</div>
+            </div>
+
+            <div id="tab_4" class="pink_father red_bg animal_fall_down_four margin_right_50">
+                <div class="font_tab_title">加入我们</div>
+                <div id="tab_4_text" class="pink_text">境</div>
+            </div>
+
+        </div>
+
+        <!-- 单页面容器 -->
+        <div id="container" class="container_style">
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    var chengyuArr = new Array("学无止境", "天道勤酬", "心花怒放", "苦中作乐", "马到成功")
+    var textIndex = Math.floor(Math.random() * 5);
+    var textStr = chengyuArr[textIndex]
+    $('#tab_1_text').html(textStr[0])
+    $('#tab_2_text').html(textStr[1])
+    $('#tab_3_text').html(textStr[2])
+    $('#tab_4_text').html(textStr[3])
+
+    tab_1.addEventListener('animationstart', function () {
+        $("#tab_1").css('visibility', 'visible');
+    }, false);
+
+    tab_2.addEventListener('animationstart', function () {
+        $("#tab_2").css('visibility', 'visible');
+    }, false);
+
+    tab_3.addEventListener('animationstart', function () {
+        $("#tab_3").css('visibility', 'visible');
+    }, false);
+
+    tab_4.addEventListener('animationstart', function () {
+        $("#tab_4").css('visibility', 'visible');
+    }, false);
+
+    tab_4.addEventListener('animationend', function () {
+
+        // 这是动态添加动画，运行
+        // $("#tab_4_text").addClass("animal_fall_down_four")
+        $('#tab_1_text').fadeOut(1000)
+        $('#tab_2_text').fadeOut(1000)
+        $('#tab_3_text').fadeOut(1000)
+        $('#tab_4_text').fadeOut(1000)
+
+
+        //动画做完，我们给一个默认值
+        var index = sessionStorage.getItem('index')
+        if (index === null) {
+            selectTab(0)
+            sessionStorage.setItem('index', 0)
+        } else {
+            // 如果是别的已存在的index,为了让下面的代码继续执行，我们可以初始化index
+            sessionStorage.setItem('index', -1)
+            selectTab(index)
+        }
+
+
+
+
+        //动画结束完毕之后才具备点击事件
+        $('#tab_1').click(function () {
+            selectTab(0)
+        })
+
+        $('#tab_2').click(function () {
+            selectTab(1)
+        })
+
+        $('#tab_3').click(function () {
+            selectTab(2)
+        })
+
+        $('#tab_4').click(function () {
+            selectTab(3)
+        })
+
+    }, false)
+
+
+    function selectTab(index) {
+        var indexStorage = sessionStorage.getItem('index')
+        if (index != indexStorage) {
+            var tabs = ["#tab_1", "#tab_2", "#tab_3", "#tab_4"];
+            for (let i = 0; i < tabs.length; i++) {
+                if (index == i) {
+                    $(tabs[i]).removeClass('red_bg').addClass('red_bg_select')
+                    //选中页面后，切换页面
+                    switchHtml(i)
+                } else {
+                    $(tabs[i]).removeClass('red_bg_select').addClass('red_bg')
+                }
+            }
+        }
+        sessionStorage.setItem('index', index)
+    }
+
+
+    // "homeHtml" 首页
+    function switchHtml(index) {
+        var keyWords = "homeHtml"
+        switch (index) {
+            case 0:
+                keyWords = "homeHtml"
+                break;
+
+            case 1:
+                keyWords = "newsHtml"
+                break
+
+            case 2:
+                keyWords = "aboutusHtml"
+                break
+
+            case 3:
+                keyWords = "addusHtml"
+                break
+
+            default:
+                keyWords = "homeHtml"
+                break;
+        }
+        //这是单页面引用home.html页面。但是不利于seo
+        ajax(keyWords, {
+            dataType: 'html',
+            cache: false,
+            success: function (res) {
+                $("#container").html(res);
+            }
+        })
+    }
+
+</script>
